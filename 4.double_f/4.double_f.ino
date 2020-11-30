@@ -1,10 +1,10 @@
 int led_pins[4] = {10,11,12,13};
-void setup() {
+static void setup() {
   for(int num = 0 ; num<4 ; num++){
     pinMode(led_pins[num] , OUTPUT);
   }
 }
-void loop() {
+static void loop() {
   digitalWrite(led_pins[0] , HIGH);
   digitalWrite(led_pins[1] , HIGH);
   digitalWrite(led_pins[2] , HIGH);

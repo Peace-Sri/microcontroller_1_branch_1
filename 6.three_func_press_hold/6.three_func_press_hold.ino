@@ -6,14 +6,14 @@ int index_led = 3;
 int input_button_b0 = 2;
 int input_button_b1 = 3;
 int delay_bounce = 100;
-void setup() {
+static void setup() {
   pinMode(input_button_b0 , INPUT);
   pinMode(input_button_b1 , INPUT);
   for(int number_led = 0 ; number_led < sizeof(led_pin)/sizeof(led_pin[0]) ; number_led++){
     pinMode(led_pin[number_led] , HIGH);
   }
 }
-void loop() {
+static void loop() {
   if (digitalRead(input_button_b0) == LOW && digitalRead(input_button_b1) == LOW){
     boolean value = debounce(input_button_b0);
     if (value = HIGH){
@@ -39,7 +39,7 @@ void loop() {
     }
   }
 }
-boolean debounce(int pin){
+static boolean debounce(int pin){
   boolean previous_state = digitalRead(pin);
   for(int count = 0 ; count < delay_bounce ; count ++){
     boolean state = digitalRead(pin);
