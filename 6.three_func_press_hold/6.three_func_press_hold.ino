@@ -1,6 +1,4 @@
-String pattern1 = "1111";
-String pattern2 = "0011";
-String pattern3 = "1010";
+String pattern = "111100111010";
 int led_pin[4] = {10,11,12,13};
 int index_led = 3;
 int input_button_b0 = 2;
@@ -18,23 +16,23 @@ static void loop() {
     boolean value = debounce(input_button_b0);
     if (value = HIGH){
       for (int number=0 ; number < 4 ; number ++){
-        digitalWrite(led_pin[number] , pattern1[number]-48);
+        digitalWrite(led_pin[number] , pattern[number]-48);
       }
     }
   }
   if (digitalRead(input_button_b0) == HIGH && digitalRead(input_button_b1) == LOW){
     boolean value = debounce(input_button_b0);
     if (value = HIGH){
-      for (int number=0 ; number < 4 ; number ++){
-        digitalWrite(led_pin[number] , pattern2[number]-48);
+      for (int number=4 ; number < 8 ; number ++){
+        digitalWrite(led_pin[number] , pattern[number]-48);
       }
     }
   }
   if (digitalRead(input_button_b0) == LOW && digitalRead(input_button_b1) == HIGH){
     boolean value = debounce(input_button_b0);
     if (value = HIGH){
-      for (int number=0 ; number < 4 ; number ++){
-        digitalWrite(led_pin[number] , pattern3[number]-48);
+      for (int number=8 ; number < 12 ; number ++){
+        digitalWrite(led_pin[number] , pattern[number]-48);
       }
     }
   }
