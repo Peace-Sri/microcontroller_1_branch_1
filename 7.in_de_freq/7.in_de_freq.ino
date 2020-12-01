@@ -1,3 +1,4 @@
+#include <stdio.h>
 int led_pin[4] = {13,12,11,10};
 int input_button_b0 = 2 ;
 int input_button_b1 = 3 ;

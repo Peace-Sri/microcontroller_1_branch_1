@@ -1,3 +1,4 @@
+#include <stdio.h>
 int led_pins[4] = {10,11,12,13};
 static void setup() {
   for(int num = 0 ; num<4 ; num++){

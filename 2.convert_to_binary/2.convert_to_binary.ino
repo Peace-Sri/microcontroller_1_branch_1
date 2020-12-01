@@ -1,3 +1,4 @@
+#include <stdio.h>
 int led_pin[4] = {10,11,12,13}; //MSD --> LSD
 int num = 0; //Create number from 0 - 15
 static void setup() {

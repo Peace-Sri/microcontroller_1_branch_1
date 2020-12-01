@@ -1,3 +1,4 @@
+#include <stdio.h>
 String pattern = "111100111010";
 int led_pin[4] = {10,11,12,13};
 int index_led = 3;
